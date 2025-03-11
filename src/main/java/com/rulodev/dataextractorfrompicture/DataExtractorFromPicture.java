@@ -9,14 +9,17 @@ public class DataExtractorFromPicture {
 
     public static void main(String[] args) {
         
-        System.out.println("Hello World!");
-        PdfImageExtractor extractor = new PdfImageExtractor();
+       PdfImageExtractor extractor = new PdfImageExtractor();
         String pdfPath = "C:\\Users\\strategic\\OneDrive\\Documentos\\ImagePdf.pdf"; // Ruta del archivo PDF
-        String outputDirectory = "C:\\Users\\strategic\\OneDrive\\Documentos\\output\\";// Directorio donde guardar las imágenes
+        String outputDirectory = "C:\\Users\\strategic\\OneDrive\\Documentos\\output\\"; // Directorio donde guardar las imágenes
+        String csvPath = "C:\\Users\\strategic\\OneDrive\\Documentos\\imagenes.csv"; // Ruta del archivo CSV
 
         try {
-            extractor.extractImages(pdfPath, outputDirectory);
+            // Llamada al método para extraer imágenes y guardarlas en un CSV
+            extractor.extractImagesToCsv(pdfPath, outputDirectory, csvPath);
         } catch (Exception e) {
+            // Manejo de errores
+            System.err.println("Ocurrió un error: " + e.getMessage());
         }
     }
 }
