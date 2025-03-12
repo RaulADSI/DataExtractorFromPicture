@@ -19,8 +19,8 @@ public class PdfImageExtractor {
 
     public void extractImagesFromPDF(String pdfPath, String outputDir) throws IOException {
         File file = new File(pdfPath);
-        if (!file.exists()) {
-            System.err.println("El archivo PDF no existe: " + pdfPath);
+        if (!file.exists()|| !file.isFile() || !pdfPath.toLowerCase().endsWith(".pdf")) {
+            System.err.println("La ruta ingresada no corresponde a un archivo PDF válido: " + pdfPath);
             return;
         }
 
