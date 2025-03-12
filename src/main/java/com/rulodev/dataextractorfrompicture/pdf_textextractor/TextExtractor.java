@@ -1,4 +1,4 @@
-package com.rulodev.dataextractorfrompicture;
+package com.rulodev.dataextractorfrompicture.pdf_textextractor;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,2 +1,4 @@
+com\rulodev\dataextractorfrompicture\pdf_textextractor\TextExtractor.class
+com\rulodev\dataextractorfrompicture\ExtractorFromPdfMain.class
+com\rulodev\dataextractorfrompicture\pdf_textextractor\PdfImageExtractor.class
 com\rulodev\dataextractorfrompicture\ExtractorMain.class
-com\rulodev\dataextractorfrompicture\TextExtractor.class
