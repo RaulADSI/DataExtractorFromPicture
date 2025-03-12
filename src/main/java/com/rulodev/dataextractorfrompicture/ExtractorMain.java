@@ -1,5 +1,7 @@
 package com.rulodev.dataextractorfrompicture;
 
+import com.rulodev.dataextractorfrompicture.pdf_textextractor.TextExtractor;
+
 /**
  *
  * @author Raul_Torres
