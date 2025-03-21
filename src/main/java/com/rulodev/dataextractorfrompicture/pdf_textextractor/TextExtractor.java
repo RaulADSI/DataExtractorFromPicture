@@ -50,6 +50,7 @@ public class TextExtractor {
                         System.out.println(result);
                         System.out.println("--------------------------------------------------\n");
                     
+                        
                     } catch (TesseractException e) {
                         System.err.println("Error procesando " + file.getName() + ": " + e.getMessage());
                         writer.write(file.getName() + ",\"Error: " + e.getMessage() + "\"\n");
