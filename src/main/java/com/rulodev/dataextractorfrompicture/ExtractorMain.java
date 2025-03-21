@@ -16,7 +16,7 @@ public class ExtractorMain {
 
         // Ruta a la carpeta que contiene las imágenes y al archivo CSV de salida
         String imageDirectory = "C:\\Users\\strategic\\OneDrive\\Documentos\\Pdf_Picture";
-        String csvPath = "C:\\Users\\strategic\\OneDrive\\Documentos\\textoExtraido.csv";
+        String csvPath = "C:\\Users\\strategic\\OneDrive\\Documentos\\Pdf_Picture\\textoExtraido.csv";
 
         try {
             textExtractor.extractTextToCsv(imageDirectory, csvPath);
