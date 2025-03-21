@@ -9,8 +9,8 @@ import com.rulodev.dataextractorfrompicture.pdf_textextractor.TextExtractor;
 public class ExtractorMain {
 
     public static void main(String[] args) {
-         System.out.println("Extracción de texto de imágenes...");
-
+        System.out.println("Extracción de texto de imágenes...");
+        
         // Instancia de la clase que realizará la extracción
         TextExtractor textExtractor = new TextExtractor();
 
@@ -19,12 +19,12 @@ public class ExtractorMain {
         String csvPath = "C:\\Users\\strategic\\OneDrive\\Documentos\\Pdf_Picture\\textoExtraido.csv";
 
         try {
+            // Llama al método para realizar la extracción y limpiar caracteres especiales
             textExtractor.extractTextToCsv(imageDirectory, csvPath);
             System.out.println("Extracción completada. Revisa el archivo CSV en: " + csvPath);
         } catch (Exception e) {
             System.err.println("Ocurrió un error durante la extracción: " + e.getMessage());
         }
-        
- }
-}
 
+    }
+}

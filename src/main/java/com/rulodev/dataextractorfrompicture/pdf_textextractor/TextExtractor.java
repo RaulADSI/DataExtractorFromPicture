@@ -10,6 +10,10 @@ import net.sourceforge.tess4j.TesseractException;
  * @author Raul_Torres
  */
 public class TextExtractor {
+    
+     public String cleanText(String text) {
+        return text.replaceAll("[^a-zA-Z0-9@\\s]", "");
+    }
 
     public void extractTextToCsv(String imageDirectory, String csvPath) throws Exception {
         // Inicializar Tesseract OCR
@@ -40,9 +44,15 @@ public class TextExtractor {
                         // Extrae el texto de la imagen
                         String result = tesseract.doOCR(file);
                         // Reemplazar saltos de línea para que el CSV quede correcto
-                        result = result.replace("\n", " ").replace("\r", " ");
-                        // Escribe en el CSV (se coloca el texto entre comillas para evitar problemas con las comas)
-                        writer.write(file.getName() + ",\"" + result + "\"\n");
+                         String[] lines = result.split("\n");
+
+                        // Escribe cada palabra en una columna separada
+                        for (String line : lines) {
+                            writer.write("\"" + file.getName() + "\",\"" + line + "\"\n");;
+                        }
+
+                        writer.write("\n"); // Nueva línea para la siguiente imagen
+                        System.out.println("Texto extraído y organizado para: " + file.getName());
                         
                         
                         System.out.println("Imagen: " + file.getName());
